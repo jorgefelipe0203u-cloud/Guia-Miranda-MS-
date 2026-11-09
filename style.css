@@ -1,0 +1,1036 @@
+/* =========================================================
+   CONFIGURAÇÕES
+========================================================= */
+
+:root {
+    --fundo: #f5f7f6;
+    --branco: #ffffff;
+    --texto: #1f2933;
+    --texto-secundario: #5f6b76;
+
+    --verde: #087f5b;
+    --verde-escuro: #056044;
+    --verde-claro: #dff5ec;
+    --verde-muito-claro: #effaf6;
+
+    --borda: #d9e2df;
+
+    --amarelo: #f4c542;
+    --vermelho: #c62828;
+
+    --sombra: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    --raio: 14px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1150px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 5%;
+
+    background: var(--verde);
+    color: white;
+}
+
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+.btn-contraste {
+    border: 2px solid white;
+    border-radius: 10px;
+
+    padding: 9px 14px;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.btn-contraste:hover {
+    background: white;
+    color: var(--verde);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(0, 75, 52, 0.88),
+            rgba(0, 75, 52, 0.88)
+        );
+
+    color: white;
+    padding: 75px 5%;
+}
+
+
+.hero-conteudo {
+    width: min(1000px, 100%);
+    margin: auto;
+    text-align: center;
+}
+
+
+.hero-tag {
+    display: inline-block;
+
+    padding: 6px 12px;
+    margin-bottom: 14px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+}
+
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 28px;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+.busca-principal {
+    display: flex;
+
+    width: min(700px, 100%);
+    margin: auto;
+
+    background: white;
+    padding: 7px;
+
+    border-radius: 14px;
+}
+
+
+.busca-principal input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: 0;
+    outline: none;
+
+    padding: 14px;
+
+    color: var(--texto);
+}
+
+
+.busca-principal button {
+    border: 0;
+    border-radius: 9px;
+
+    padding: 0 20px;
+
+    background: var(--verde);
+    color: white;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.busca-principal button:hover {
+    background: var(--verde-escuro);
+}
+
+
+/* =========================================================
+   CATEGORIAS
+========================================================= */
+
+.categorias {
+    padding-top: 45px;
+}
+
+
+.categorias h2 {
+    margin-bottom: 20px;
+}
+
+
+.categorias-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 100px;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+
+    background: var(--branco);
+    color: var(--texto);
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra);
+
+    font-weight: 700;
+}
+
+
+.categoria:first-child {
+    color: var(--verde);
+}
+
+
+.categoria:hover {
+    transform: translateY(-2px);
+    border-color: var(--verde);
+}
+
+
+/* =========================================================
+   LOCAIS
+========================================================= */
+
+.lugares {
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+
+
+.mini-titulo {
+    display: block;
+
+    color: var(--verde);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.titulo-secao h2 {
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   PESQUISA
+========================================================= */
+
+.area-pesquisa {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.campo-pesquisa {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.campo-pesquisa label {
+    font-weight: 700;
+}
+
+
+.campo-pesquisa input,
+.campo-pesquisa select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    background: white;
+    color: var(--texto);
+
+    outline: none;
+}
+
+
+.campo-pesquisa input:focus,
+.campo-pesquisa select:focus {
+    border-color: var(--verde);
+
+    box-shadow: 0 0 0 3px rgba(8,127,91,0.12);
+}
+
+
+/* =========================================================
+   FILTROS DE ACESSIBILIDADE
+========================================================= */
+
+.filtros-acessibilidade {
+    margin: 25px 0;
+
+    padding: 22px;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+
+    background: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+
+.filtros-titulo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.filtros-titulo h2 {
+    margin-top: 2px;
+
+    font-size: 1.45rem;
+}
+
+
+.icone-acessibilidade {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--verde-claro);
+
+    font-size: 1.5rem;
+}
+
+
+.texto-filtro {
+    margin: 8px 0 18px;
+
+    color: var(--texto-secundario);
+}
+
+
+.opcoes-acessibilidade {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.opcao-acessibilidade {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    background: var(--verde-muito-claro);
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+
+.opcao-acessibilidade:hover {
+    border-color: var(--verde);
+}
+
+
+.opcao-acessibilidade input {
+    width: 20px;
+    height: 20px;
+
+    accent-color: var(--verde);
+
+    cursor: pointer;
+}
+
+
+.btn-limpar {
+    margin-top: 15px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--verde);
+    border-radius: 9px;
+
+    background: white;
+    color: var(--verde);
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.btn-limpar:hover {
+    background: var(--verde);
+    color: white;
+}
+
+
+/* =========================================================
+   LISTA DE LOCAIS
+========================================================= */
+
+.lista-lugares {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.card-local {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 270px;
+
+    padding: 20px;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+
+    background: white;
+
+    box-shadow: var(--sombra);
+}
+
+
+.card-categoria {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 5px 9px;
+
+    margin-bottom: 10px;
+
+    border-radius: 20px;
+
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+.card-local h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.3rem;
+}
+
+
+.card-endereco {
+    margin-bottom: 12px;
+
+    color: var(--texto-secundario);
+}
+
+
+.card-descricao {
+    margin-bottom: 15px;
+
+    color: var(--texto-secundario);
+}
+
+
+.tags-acessibilidade {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+
+.tag-acessibilidade {
+    padding: 4px 7px;
+
+    border-radius: 7px;
+
+    background: #eeeeee;
+
+    color: #666;
+
+    font-size: 0.73rem;
+}
+
+
+.tag-acessibilidade.disponivel {
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+
+.btn-ver-detalhes {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: var(--verde);
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.btn-ver-detalhes:hover {
+    background: var(--verde-escuro);
+}
+
+
+/* =========================================================
+   DETALHES
+========================================================= */
+
+.detalhes {
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+
+
+.btn-voltar {
+    margin-bottom: 20px;
+
+    border: 0;
+
+    background: transparent;
+    color: var(--verde);
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.detalhes-card {
+    padding: 30px;
+
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+
+    background: white;
+
+    box-shadow: var(--sombra);
+}
+
+
+.detalhe-categoria {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+
+    font-weight: 800;
+}
+
+
+.detalhes-card h2 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+
+.det-endereco {
+    color: var(--texto-secundario);
+
+    margin-bottom: 18px;
+}
+
+
+.det-descricao {
+    margin-bottom: 25px;
+}
+
+
+.det-acessibilidade {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.det-acessibilidade-item {
+    padding: 12px;
+
+    border-radius: 9px;
+
+    background: #eeeeee;
+
+    color: #666;
+}
+
+
+.det-acessibilidade-item.disponivel {
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+
+    font-weight: 700;
+}
+
+
+.aviso-informacao {
+    padding: 15px;
+
+    margin-bottom: 25px;
+
+    border-left: 5px solid var(--amarelo);
+
+    background: #fff9df;
+}
+
+
+.aviso-informacao p {
+    margin-top: 5px;
+}
+
+
+.botoes-detalhes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.btn-principal {
+    background: var(--verde);
+    color: white;
+}
+
+
+.btn-principal:hover {
+    background: var(--verde-escuro);
+}
+
+
+.btn-secundario {
+    border: 1px solid var(--borda);
+
+    background: white;
+    color: var(--texto);
+}
+
+
+.btn-secundario:hover {
+    border-color: var(--verde);
+}
+
+
+/* =========================================================
+   SEM RESULTADOS
+========================================================= */
+
+.sem-resultados {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    text-align: center;
+}
+
+
+.sem-resultados > div {
+    font-size: 3rem;
+}
+
+
+.sem-resultados button {
+    margin-top: 15px;
+
+    padding: 11px 18px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: var(--verde);
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    background: #12352b;
+    color: white;
+
+    padding-top: 45px;
+}
+
+
+.rodape-conteudo {
+    width: min(1150px, 92%);
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 35px;
+}
+
+
+.rodape h3 {
+    margin-bottom: 10px;
+}
+
+
+.rodape p {
+    color: #d8e4df;
+}
+
+
+.rodape button {
+    display: block;
+
+    border: 0;
+
+    margin: 7px 0;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.rodape-final {
+    padding: 18px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    text-align: center;
+
+    color: #d8e4df;
+}
+
+
+/* =========================================================
+   ALTO CONTRASTE
+========================================================= */
+
+body.contraste {
+    --fundo: #000000;
+    --branco: #000000;
+    --texto: #ffffff;
+    --texto-secundario: #ffffff;
+
+    --verde: #ffff00;
+    --verde-escuro: #ffff00;
+
+    --verde-claro: #222222;
+    --verde-muito-claro: #111111;
+
+    --borda: #ffffff;
+
+    background: #000;
+    color: #fff;
+}
+
+
+body.contraste .cabecalho,
+body.contraste .hero,
+body.contraste .rodape {
+    background: #000;
+    color: #fff;
+
+    border-bottom: 2px solid #fff;
+}
+
+
+body.contraste .card-local,
+body.contraste .categoria,
+body.contraste .detalhes-card,
+body.contraste .filtros-acessibilidade {
+    background: #000;
+
+    border: 2px solid #fff;
+}
+
+
+body.contraste .btn-principal,
+body.contraste .btn-ver-detalhes {
+    background: #ffff00;
+    color: #000;
+}
+
+
+body.contraste .campo-pesquisa input,
+body.contraste .campo-pesquisa select {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+body.contraste .aviso-informacao {
+    background: #000;
+    border: 2px solid #ffff00;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .categorias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lista-lugares {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+
+    .busca-principal {
+        flex-direction: column;
+
+        gap: 8px;
+
+        background: transparent;
+    }
+
+
+    .busca-principal input {
+        border-radius: 9px;
+    }
+
+
+    .busca-principal button {
+        padding: 12px;
+    }
+
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .area-pesquisa {
+        grid-template-columns: 1fr;
+    }
+
+
+    .opcoes-acessibilidade {
+        grid-template-columns: 1fr;
+    }
+
+
+    .lista-lugares {
+        grid-template-columns: 1fr;
+    }
+
+
+    .det-acessibilidade {
+        grid-template-columns: 1fr;
+    }
+
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .botoes-detalhes {
+        flex-direction: column;
+    }
+
+
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+    }
+
+}
